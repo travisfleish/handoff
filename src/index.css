@@ -1,0 +1,303 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* ─── Brand Fonts ─────────────────────────────────────────────────────────── */
+/* Licensed weights */
+@font-face {
+  font-family: "KlarheitKurrent";
+  src: url("/fonts/KlarheitKurrent-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KlarheitKurrent";
+  src: url("/fonts/KlarheitKurrent-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Trial weights (internal use / sales collateral only) */
+@font-face {
+  font-family: "KlarheitKurrent";
+  src: url("/fonts/ESKlarheitKurrent-Bk_TRIAL.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KlarheitKurrent";
+  src: url("/fonts/ESKlarheitKurrent-Md_TRIAL.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KlarheitKurrent";
+  src: url("/fonts/ESKlarheitKurrent-Smbd_TRIAL.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RedHatText";
+  src: url("/fonts/RedHatText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RedHatText";
+  src: url("/fonts/RedHatText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Brand Tokens (CSS custom properties) ───────────────────────────────── */
+:root {
+  --font-heading: "KlarheitKurrent", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "RedHatText", ui-sans-serif, system-ui, sans-serif;
+
+  --color-navy: #0D1226;
+  --color-blue: #0000DC;
+  --color-lightBlue: #95ECFD;
+  --color-brightGreen: #E1FF67;
+  --color-lightGreen: #18C971;
+  --color-green: #047C40;
+  --color-lightPurple: #C2D1FF;
+  --color-purple: #4337A8;
+  --color-lightOrange: #FFEBAF;
+  --color-orange: #FA5D00;
+  --color-lightRed: #F76B6A;
+  --color-red: #C20000;
+  --color-black: #000000;
+  --color-lightGrey: #F6F7F9;
+  --color-lavenderGrey: #E7E7E9;
+  --color-white: #ffffff;
+  --color-snow: #FAFAFA;
+
+  --container-narrow: 1110px;
+  --container-default: 1280px;
+  --container-wide: 1376px;
+
+  --ease-slide: cubic-bezier(0.68, -0.2, 0.15, 0.98);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Base ────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply font-heading;
+}
+
+body {
+  @apply bg-navy text-white;
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-lightBlue) 40%, transparent);
+  color: white;
+}
+
+/* ─── Typography scale ────────────────────────────────────────────────────── */
+.text-88 {
+  font-size: clamp(3.75rem, calc(-1.5rem + 10.9375vw), 5.5rem);
+  @apply leading-[1.08] tracking-[0em];
+}
+
+.text-80 {
+  font-size: clamp(2.5rem, calc(-5rem + 15.625vw), 5rem);
+  @apply leading-[1.08] tracking-[-0.1em];
+}
+
+.text-72 {
+  font-size: clamp(2.25rem, calc(-4.5rem + 14.0625vw), 4.5rem);
+  @apply leading-[1.2] tracking-[-0.03em];
+}
+
+.text-70 {
+  font-size: clamp(2.1875rem, calc(-4.375rem + 13.671875vw), 4.375rem);
+  @apply leading-[1.1] tracking-[-0.07em];
+}
+
+.text-70.is-stat {
+  font-size: clamp(3.6875rem, calc(-3.5rem + 18.046875vw), 4.5rem);
+}
+
+.text-64 {
+  font-size: clamp(2rem, calc(-4rem + 12.5vw), 4rem);
+  @apply leading-[1.1] tracking-[-0.07em];
+}
+
+.text-64.is-stat {
+  font-size: clamp(4rem, calc(-4rem + 25vw), 4rem);
+}
+
+.text-header-stat {
+  font-size: clamp(2.125rem, calc(-0.5rem + 5.46875vw), 3rem);
+  @apply leading-[1.1];
+}
+
+h1, .text-h1 {
+  font-size: clamp(2.25rem, calc(-4.5rem + 14.0625vw), 4.5rem);
+  @apply font-light leading-[1.08] tracking-[-0.03em];
+}
+h1.is-large, .text-h1.is-large {
+  font-size: clamp(2.3125rem, calc(-4.625rem + 14.453125vw), 4.75rem);
+}
+
+h2, .text-h2 {
+  font-size: clamp(1.9375rem, calc(-2.75rem + 9.765625vw), 3.5rem);
+  @apply leading-[1.10] tracking-[-0.035em] font-normal;
+}
+
+h3, .text-h3 {
+  font-size: clamp(1.8125rem, calc(-1.375rem + 6.640625vw), 2.875rem);
+  @apply font-light leading-[1.10] tracking-[-0.02875em];
+}
+
+h4, .text-h4 {
+  font-size: clamp(1.75rem, calc(-0.5rem + 4.6875vw), 2.5rem);
+  @apply font-light leading-[1.10] tracking-[-0.05em];
+}
+
+h5, .text-h5 {
+  font-size: clamp(1.5rem, 3.125vw, 2rem);
+  @apply font-light leading-[1.10] tracking-[-0.035em];
+}
+
+h6, .text-h6 {
+  font-size: clamp(1.3125rem, 2.734375vw, 1.75rem);
+  @apply font-light leading-[1.40] tracking-[-0.035em];
+}
+
+.text-h7 {
+  font-size: clamp(1.0625rem, calc(0.125rem + 1.953125vw), 1.375rem);
+  @apply font-medium leading-[1.40] tracking-[-0.0275em];
+}
+
+.text-40 {
+  font-size: clamp(1.9375rem, calc(0.25rem + 3.515625vw), 2.5rem);
+  @apply leading-[1.4] tracking-[-0.0375em];
+}
+
+.text-40-s {
+  font-size: clamp(1.1875rem, calc(-2.75rem + 8.203125vw), 2.5rem);
+  @apply leading-[1.4] tracking-[-0.0375em];
+}
+
+.text-36 {
+  font-size: clamp(1.125rem, calc(-2.25rem + 7.03125vw), 2.25rem);
+  @apply leading-[1.1] tracking-[-0.045em];
+}
+
+.text-32 {
+  font-size: clamp(1.4rem, calc(-0.4rem + 3.75vw), 2rem);
+  @apply leading-[1.4] tracking-[-0.0375em];
+}
+
+.text-30 {
+  font-size: clamp(0.9375rem, calc(-1.875rem + 5.859375vw), 1.875rem);
+  @apply leading-[1.4] tracking-[-0.0375em];
+}
+
+.text-24 {
+  font-size: clamp(1rem, calc(-0.5rem + 3.125vw), 1.5rem);
+  @apply leading-[1.4] tracking-[-0.03em];
+}
+
+.text-22 {
+  font-size: clamp(1rem, calc(-0.125rem + 2.34375vw), 1.375rem);
+  @apply leading-[1.5] tracking-[-0.01375em];
+}
+
+.text-20 {
+  font-size: clamp(1.125rem, calc(0.75rem + 0.78125vw), 1.25rem);
+  @apply leading-[1.45] tracking-[-0.0125em];
+}
+
+.text-18 {
+  font-size: clamp(1rem, calc(0.625rem + 0.78125vw), 1.125rem);
+  @apply leading-[1.45] tracking-[-0.01125em];
+}
+
+.text-17 { font-size: 1.0625rem; @apply leading-[1.2] tracking-[-0.010625em]; }
+.text-16 { font-size: 1rem;      @apply leading-[1.35] tracking-[-0.01em]; }
+.text-15 { font-size: 0.9375rem; @apply leading-[1.45] tracking-[-0.009375em]; }
+.text-14 { font-size: 0.875rem;  @apply leading-[1.3] tracking-[-0.009375em]; }
+.text-12 { font-size: 0.75rem;   @apply leading-[1.45] tracking-[-0.0075em]; }
+.text-11 { font-size: 0.6875rem; @apply leading-[1.45] tracking-[-0.0075em]; }
+.text-9  { font-size: 0.5625rem; @apply leading-[1.45] tracking-[-0.00625em]; }
+
+/* ─── Container variants ──────────────────────────────────────────────────── */
+.container--small  { max-width: 676px;  @apply mx-auto; }
+.container--medium { max-width: 846px;  @apply mx-auto; }
+.container--large  { max-width: 1376px; @apply mx-auto; }
+
+/* ─── Text stroke stack ───────────────────────────────────────────────────── */
+.text-stroke-stack__item--stroke-brightGreen { -webkit-text-stroke: 1px #E1FF67; }
+.text-stroke-stack__item--stroke-lightPurple { -webkit-text-stroke: 1px #C2D1FF; }
+.text-stroke-stack__item--stroke-navy        { -webkit-text-stroke: 1px #0D1226; }
+.text-stroke-stack__item--stroke-white       { -webkit-text-stroke: 1px #ffffff; }
+.text-stroke-stack__item--stroke-lightBlue   { -webkit-text-stroke: 1px #95ECFD; }
+
+/* ─── Scrollbar utilities ─────────────────────────────────────────────────── */
+.scrollbar--dark::-webkit-scrollbar         { width: 6px; height: 6px; }
+.scrollbar--dark::-webkit-scrollbar-track   { background: transparent; }
+.scrollbar--dark::-webkit-scrollbar-thumb   { background: #0D1226; border-radius: 9999px; }
+
+.scrollbar--light::-webkit-scrollbar        { width: 6px; height: 6px; }
+.scrollbar--light::-webkit-scrollbar-track  { background: transparent; }
+.scrollbar--light::-webkit-scrollbar-thumb  { background: rgba(255,255,255,0.3); border-radius: 9999px; }
+
+/* ─── Line break utility ──────────────────────────────────────────────────── */
+.br { @apply md:block; }
+.br--break-at-all { @apply block; }
+
+/* ─── Button reset ────────────────────────────────────────────────────────── */
+button { cursor: pointer; }
+
+/* ─── Handoff page motion ─────────────────────────────────────────────────── */
+.hero-enter {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  animation: hero-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter-1 { animation-delay: 0.08s; }
+.hero-enter-2 { animation-delay: 0.2s; }
+.hero-enter-3 { animation-delay: 0.36s; }
+.hero-enter-4 { animation-delay: 0.5s; }
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.duration-400 {
+  transition-duration: 400ms;
+}
+
+.transition-visibility {
+  transition-property: visibility, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
