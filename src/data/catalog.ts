@@ -1,6 +1,6 @@
 export type Framework = 'Vite' | 'Next' | 'Other'
 
-export type RepoRole = 'app' | 'design system' | 'starter' | 'kiosk'
+export type RepoRole = 'app' | 'design system' | 'starter'
 
 export interface VercelProject {
   id: string
@@ -200,14 +200,14 @@ export const vercelProjects: VercelProject[] = [
       'Deal Library for Genius Sports — searchable deal / package reference with partner and market context. DNS under geniussportslibrary.com.',
     useCase:
       'Sales and partnerships looking up deals, sharing links, and (when enabled) emailing via Resend.',
-    githubRepo: 'travisfleish/genius-deal-library',
+    githubRepo: 'travisfleish/audience_tool_v0',
     vercelProject: 'genius-deal-library',
     supabase: {
       used: true,
       note: 'Thin / optional — light persistence when needed; not the heavy path.',
     },
     services: ['Resend'],
-    framework: 'Next',
+    framework: 'Vite',
     screenshot: '/screenshots/genius-deal-library.png',
     accent: 'from-green-400/40 via-emerald-700/25 to-navy-900/80',
   },
@@ -448,9 +448,9 @@ export const githubRepos: GitHubRepo[] = [
     fullName: 'travisfleish/audience_tool_v0',
     role: 'app',
     description:
-      'Earlier / v0 audience tool lineage. Keep for history and cherry-picks; prefer audience-tool for new work.',
+      'Source for Deal Library (genius-deal-library on Vercel) — partner sites under geniussportslibrary.com.',
     url: 'https://github.com/travisfleish/audience_tool_v0',
-    vercelLinked: false,
+    vercelLinked: true,
   },
   {
     id: 'nf_collateral_packages',
@@ -462,15 +462,6 @@ export const githubRepos: GitHubRepo[] = [
     vercelLinked: true,
   },
   {
-    id: 'NF_touchscreen_v2',
-    fullName: 'travisfleish/NF_touchscreen_v2',
-    role: 'kiosk',
-    description:
-      'NewFront touchscreen / kiosk experience. GitHub-only if no matching Vercel project — run locally or on venue hardware.',
-    url: 'https://github.com/travisfleish/NF_touchscreen_v2',
-    vercelLinked: false,
-  },
-  {
     id: 'moments_collateral_v2',
     fullName: 'travisfleish/moments_collateral_v2',
     role: 'app',
@@ -480,13 +471,22 @@ export const githubRepos: GitHubRepo[] = [
     vercelLinked: true,
   },
   {
-    id: 'marketing-app-starter',
-    fullName: 'travisfleish/marketing-app-starter',
+    id: 'lovable-brand-template',
+    fullName: 'travisfleish/lovable-brand-template',
     role: 'starter',
     description:
-      'Starter template for new Genius Sports marketing apps (Vite + Tailwind patterns).',
-    url: 'https://github.com/travisfleish/marketing-app-starter',
+      'Brand template for new Genius Sports marketing apps — Klarheit / Red Hat, logos, tokens, and shared UI primitives.',
+    url: 'https://github.com/travisfleish/lovable-brand-template',
     vercelLinked: false,
+  },
+  {
+    id: 'gs-marketing-kit',
+    fullName: 'travisfleish/gs-marketing-kit',
+    role: 'design system',
+    description:
+      'Genius Sports marketing kit — brand assets and patterns. Deployed as gs-marketing-kit on Vercel.',
+    url: 'https://github.com/travisfleish/gs-marketing-kit',
+    vercelLinked: true,
   },
   {
     id: 'newfront_packages',
@@ -506,15 +506,6 @@ export const githubRepos: GitHubRepo[] = [
     url: 'https://github.com/travisfleish/marketing-ui-catalog',
     vercelLinked: false,
   },
-  {
-    id: 'gs-marketing-ui',
-    fullName: 'travisfleish/gs-marketing-ui',
-    role: 'design system',
-    description:
-      'Private Genius Sports marketing UI design system. Consumed by collateral apps (e.g. NewFront).',
-    url: 'https://github.com/travisfleish/gs-marketing-ui',
-    vercelLinked: false,
-  },
 ]
 
 export const accessChecklist: AccessItem[] = [
@@ -528,7 +519,8 @@ export const accessChecklist: AccessItem[] = [
   {
     id: 'github',
     system: 'GitHub',
-    detail: 'Org/user repos under travisfleish/* — clone, push, and private design-system access (gs-marketing-ui).',
+    detail:
+      'Org/user repos under travisfleish/* — clone, push, and brand starters (lovable-brand-template, gs-marketing-kit).',
     required: true,
   },
   {

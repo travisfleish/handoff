@@ -50,7 +50,7 @@ export function WorkingInCursor() {
 
       <div
         id="cursor-usage"
-        className="scroll-mt-20 grid gap-8 border-t border-lavenderGrey pt-12 md:grid-cols-2 md:items-start md:gap-10 md:pt-16"
+        className="scroll-mt-20 grid grid-cols-1 gap-8 border-t border-lavenderGrey pt-12 md:grid-cols-2 md:items-center md:gap-12 md:pt-16"
       >
         <div>
           <h3 className="font-heading text-h5 text-navy">Usage limits</h3>
@@ -92,9 +92,6 @@ export function WorkingInCursor() {
             height={717}
             className="block h-auto w-full"
           />
-          <figcaption className="border-t border-lavenderGrey px-4 py-3 font-body text-[13px] text-navy/50">
-            Example Usage view — monthly limit, MTD spend, and cumulative chart.
-          </figcaption>
         </figure>
       </div>
     </Section>

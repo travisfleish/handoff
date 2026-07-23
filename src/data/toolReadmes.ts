@@ -155,7 +155,7 @@ export const toolReadmes: Record<string, ToolReadme> = {
 
   'genius-deal-library': {
     overview:
-      'Searchable deal / package library for Genius Sports. Partner-facing sites under geniussportslibrary.com; optional Resend for email, thin Supabase when persistence is needed.',
+      'Searchable deal / package library for Genius Sports. Partner-facing sites under geniussportslibrary.com; optional Resend for email, thin Supabase when persistence is needed. Source repo is travisfleish/audience_tool_v0.',
     sections: [
       {
         title: 'What it does',
@@ -168,14 +168,15 @@ export const toolReadmes: Record<string, ToolReadme> = {
       {
         title: 'Stack',
         bullets: [
-          'Next on Vercel · project genius-deal-library',
+          'Vite on Vercel · project genius-deal-library',
+          'GitHub: travisfleish/audience_tool_v0',
           'Resend for transactional/alert email when enabled',
           'Supabase optional / thin — not the heavy data path',
         ],
       },
       {
         title: 'Day-to-day',
-        code: 'git clone …/genius-deal-library\nvercel env pull\nnpm install && npm run dev',
+        code: 'git clone …/audience_tool_v0\nvercel env pull\nnpm install && npm run dev',
         bullets: [
           'Env and domains live in Vercel team travis-fleishers-projects',
           'Confirm DNS ownership for *.geniussportslibrary.com before adding partners',
@@ -208,8 +209,9 @@ export const toolReadmes: Record<string, ToolReadme> = {
       {
         title: 'Related',
         bullets: [
-          'NF_touchscreen_v2 — kiosk / venue hardware (GitHub-only)',
           'newfront_packages — adjacent package content work',
+          'lovable-brand-template — brand starter for new marketing apps',
+          'gs-marketing-kit — marketing kit on Vercel',
         ],
       },
     ],

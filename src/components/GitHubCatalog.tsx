@@ -7,7 +7,6 @@ const roleLabel: Record<string, string> = {
   app: 'App',
   'design system': 'Design system',
   starter: 'Starter',
-  kiosk: 'Kiosk',
 }
 
 export function GitHubCatalog() {
@@ -30,8 +29,7 @@ export function GitHubCatalog() {
         </div>
         <h2 className="text-h2 text-navy">Repositories</h2>
         <p className="mt-4 max-w-2xl font-body text-18 text-navy/70">
-          Core travisfleish/* repos for apps, design systems, starters, and the
-          NewFront kiosk.
+          Core travisfleish/* repos for apps, design systems, and brand starters.
         </p>
       </div>
 
