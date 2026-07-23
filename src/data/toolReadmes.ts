@@ -294,7 +294,7 @@ export const toolReadmes: Record<string, ToolReadme> = {
       {
         title: 'Crucial details',
         bullets: [
-          'Domain: march-madness.vercel.app',
+          'Domain: march-madness-hazel.vercel.app',
           'Repo: travisfleish/march-madness · Vite',
           'Seasonal — expect time-boxed updates each tournament cycle',
           'No Supabase for core collateral',

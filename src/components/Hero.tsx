@@ -4,7 +4,7 @@ import LineBlock from './elements/LineBlock'
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden bg-navy px-6 pb-16 pt-32 md:px-10 md:pb-20 lg:px-16">
+    <header className="relative overflow-hidden bg-navy px-6 pb-24 pt-40 md:px-10 md:pb-28 md:pt-44 lg:px-16">
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         aria-hidden="true"

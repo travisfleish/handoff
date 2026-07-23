@@ -16,7 +16,7 @@ const sites = [
   { id: 'moments_collateral_v2', url: 'https://moments.geniussportsaudiences.com' },
   { id: 'moments_collateral_emea', url: 'https://momentscollateralemea.vercel.app' },
   { id: 'world-cup-v2', url: 'https://world-cup-v2.vercel.app' },
-  { id: 'march-madness', url: 'https://march-madness.vercel.app' },
+  { id: 'march-madness', url: 'https://march-madness-hazel.vercel.app' },
   { id: 'nba-augmentation', url: 'https://nba-augmentation.vercel.app' },
   { id: 'gs-marketing-kit', url: 'https://gs-marketing-kit.vercel.app' },
   { id: 'signals-explorer', url: 'https://signals-explorer-pi.vercel.app' },

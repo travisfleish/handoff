@@ -295,7 +295,7 @@ export const vercelProjects: VercelProject[] = [
     id: 'march-madness',
     name: 'march-madness',
     title: 'March Madness',
-    domains: ['march-madness.vercel.app'],
+    domains: ['march-madness-hazel.vercel.app'],
     description:
       'March Madness sponsorship and audience collateral experience.',
     useCase:
