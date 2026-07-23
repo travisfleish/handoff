@@ -47,6 +47,56 @@ export function WorkingInCursor() {
           </li>
         ))}
       </ol>
+
+      <div
+        id="cursor-usage"
+        className="scroll-mt-20 grid gap-8 border-t border-lavenderGrey pt-12 md:grid-cols-2 md:items-start md:gap-10 md:pt-16"
+      >
+        <div>
+          <h3 className="font-heading text-h5 text-navy">Usage limits</h3>
+          <p className="mt-4 font-body text-18 text-navy/70">
+            Agent and model spend is capped at{' '}
+            <span className="font-medium text-navy">$150 per month</span>.
+            Track spend so you know how much included usage is left before the
+            cycle resets.
+          </p>
+          <ol className="mt-6 list-decimal space-y-2 pl-5 font-body text-14 leading-relaxed text-navy/70">
+            <li>
+              Sign in to Cursor with your Genius Sports account via{' '}
+              <span className="font-medium text-navy">SSO</span> (company login,
+              not a personal Cursor account).
+            </li>
+            <li>
+              Open{' '}
+              <a
+                href="https://cursor.com/dashboard?tab=usage"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-blue underline-offset-2 hover:underline"
+              >
+                cursor.com/dashboard → Usage
+              </a>{' '}
+              (or Settings → Usage in the app).
+            </li>
+            <li>
+              Check monthly spend vs. the $150 limit, included vs. on-demand,
+              and the cumulative chart for the billing period.
+            </li>
+          </ol>
+        </div>
+        <figure className="overflow-hidden rounded-lg border border-lavenderGrey bg-navy/5">
+          <img
+            src="/screenshots/cursor-usage.png"
+            alt="Cursor Usage dashboard showing monthly spend against the $150 limit, with included usage and a cumulative spend chart"
+            width={1024}
+            height={717}
+            className="block h-auto w-full"
+          />
+          <figcaption className="border-t border-lavenderGrey px-4 py-3 font-body text-[13px] text-navy/50">
+            Example Usage view — monthly limit, MTD spend, and cumulative chart.
+          </figcaption>
+        </figure>
+      </div>
     </Section>
   )
 }

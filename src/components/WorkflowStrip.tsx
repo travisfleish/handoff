@@ -24,7 +24,7 @@ export function WorkflowStrip() {
       classnames="scroll-mt-20"
     >
       <div className="max-w-3xl">
-        <DotSubheading subheading="Stack" colour="blue" />
+        <DotSubheading subheading="Stack" colour="blue" background="white" />
         <h2 className="text-h2 text-navy">How work moves</h2>
         <p className="mt-4 max-w-xl font-body text-18 text-navy/70">
           Cursor → GitHub → Vercel, with Supabase and Resend only when the app needs them.

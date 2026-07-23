@@ -519,6 +519,13 @@ export const githubRepos: GitHubRepo[] = [
 
 export const accessChecklist: AccessItem[] = [
   {
+    id: 'cursor',
+    system: 'Cursor',
+    detail:
+      'Genius Sports SSO login (not a personal account). Agent spend is $150/month — track it under dashboard → Usage.',
+    required: true,
+  },
+  {
     id: 'github',
     system: 'GitHub',
     detail: 'Org/user repos under travisfleish/* — clone, push, and private design-system access (gs-marketing-ui).',

@@ -1,4 +1,5 @@
 import { vercelProjects } from '../data/catalog'
+import DotSubheading from './sections/DotSubheading'
 import Section from './layouts/Section'
 import { ProjectTile } from './ProjectTile'
 
@@ -14,12 +15,7 @@ export function VercelCatalog() {
       classnames="scroll-mt-20"
     >
       <div className="max-w-3xl">
-        <div className="mb-6">
-          <div className="relative inline-flex items-center space-x-2 rounded-l-full bg-white/10 py-[.3rem] pl-2 pr-3 md:py-2 md:pl-3 md:pr-6">
-            <div className="h-2 w-2 shrink-0 rounded-full bg-lightBlue" />
-            <span className="font-body text-[15px] text-white">Vercel</span>
-          </div>
-        </div>
+        <DotSubheading subheading="Vercel" colour="lightBlue" background="white15" />
         <h2 className="text-h2 text-white">Deployed projects</h2>
         <p className="mt-4 max-w-2xl font-body text-18 text-white/70">
           Team travis-fleishers-projects. Open a tile for a simplified README —
