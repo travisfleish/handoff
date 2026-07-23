@@ -92,14 +92,14 @@ export const cursorGuideSteps: CursorGuideStep[] = [
     id: 'clone',
     title: 'Clone a repo',
     detail:
-      'From the catalog, open the GitHub repo → Code → copy the HTTPS or SSH URL. In Cursor’s terminal (or macOS Terminal):',
+      'From the catalog, open the GitHub repo → Code → copy the HTTPS or SSH URL. Then either: (1) In Cursor, open a new window (File → New Window) and on the welcome tab click Clone Repository — paste the URL and pick a folder; Cursor clones and opens it for you. Or (2) in Cursor’s terminal (or macOS Terminal):',
     tip: 'git clone https://github.com/travisfleish/<repo>.git',
   },
   {
     id: 'open',
     title: 'Open the project',
     detail:
-      'File → Open Folder… and select the cloned directory. Cursor opens it as a workspace so Agent, search, and Git all target that repo.',
+      'If you used Clone Repository on the welcome tab, you’re already in the workspace. Otherwise File → Open Folder… and select the cloned directory. Cursor opens it so Agent, search, and Git all target that repo.',
   },
   {
     id: 'install',
