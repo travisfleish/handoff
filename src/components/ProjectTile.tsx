@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom'
 import type { VercelProject } from '../data/catalog'
 import LineBlock from './elements/LineBlock'
 
 interface ProjectTileProps {
   project: VercelProject
   index: number
-  onSelect: (project: VercelProject) => void
 }
 
 const accentLines = [
@@ -16,17 +16,16 @@ const accentLines = [
   'lightGreen',
 ] as const
 
-export function ProjectTile({ project, index, onSelect }: ProjectTileProps) {
+export function ProjectTile({ project, index }: ProjectTileProps) {
   const primaryDomain = project.domains[0]
   const lineColor = accentLines[index % accentLines.length]
 
   return (
-    <button
-      type="button"
-      onClick={() => onSelect(project)}
+    <Link
+      to={`/tools/${project.id}`}
       className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5 text-left outline-none focus-visible:ring-2 focus-visible:ring-lightBlue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
       style={{ animationDelay: `${Math.min(index * 40, 400)}ms` }}
-      aria-label={`Open details for ${project.title}`}
+      aria-label={`Open README for ${project.title}`}
     >
       {project.screenshot ? (
         <img
@@ -77,6 +76,6 @@ export function ProjectTile({ project, index, onSelect }: ProjectTileProps) {
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 rounded-2xl border border-white/0 transition-colors duration-300 group-hover:border-lightBlue/40" />
-    </button>
+    </Link>
   )
 }

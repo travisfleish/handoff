@@ -136,9 +136,9 @@ export const vercelProjects: VercelProject[] = [
     title: 'Audience Tool',
     domains: ['geniussportsaudiences.com', 'partner subdomains'],
     description:
-      'Primary audience explorer for Genius Sports. Browse segments, partners, and inventory-facing audience views used in sales and marketing conversations.',
+      'Primary audience explorer for Genius Sports. One deploy serves main + partner variants (pmg, guide, wpp, nfl, etc.) via hostname — see the tool README for how domains map onto the backend.',
     useCase:
-      'Live demos with partners and internal teams exploring audience packages on geniussportsaudiences.com and partner-branded subs.',
+      'Live demos with partners and internal teams exploring audience packages on geniussportsaudiences.com and partner-branded subdomains.',
     githubRepo: 'travisfleish/audience-tool',
     vercelProject: 'audience-tool-main',
     supabase: {

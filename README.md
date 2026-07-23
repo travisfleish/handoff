@@ -30,4 +30,4 @@ Vite · React · TypeScript · Tailwind CSS · Vercel
 
 Visual system from [lovable-brand-template](https://github.com/travisfleish/lovable-brand-template): Klarheit / Red Hat fonts, Genius Sports logos & icons, brand tokens, and shared UI primitives under `src/components/{brand,elements,layouts,sections}` and `src/tokens`.
 
-Catalog content lives in `src/data/catalog.ts` (data-driven tiles + detail panel). Homepage screenshots live in `public/screenshots/` — refresh with `npm run screenshots` (Playwright).
+Catalog content lives in `src/data/catalog.ts` (tiles). Simplified per-tool READMEs live in `src/data/toolReadmes.ts` and render at `/tools/:id`. Homepage screenshots live in `public/screenshots/` — refresh with `npm run screenshots` (Playwright).

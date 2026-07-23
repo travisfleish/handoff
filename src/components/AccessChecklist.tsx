@@ -1,5 +1,4 @@
 import { accessChecklist } from '../data/catalog'
-import GetStartedCTA from './sections/GetStartedCTA'
 import Section from './layouts/Section'
 
 export function AccessChecklist() {
@@ -52,12 +51,6 @@ export function AccessChecklist() {
           </li>
         ))}
       </ul>
-
-      <GetStartedCTA
-        heading="Ready to take over?"
-        content="Start with GitHub and Vercel access, then walk the catalog."
-        link={{ title: 'View catalog', url: '#catalog' }}
-      />
     </Section>
   )
 }

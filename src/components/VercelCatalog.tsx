@@ -1,12 +1,8 @@
-import { vercelProjects, type VercelProject } from '../data/catalog'
+import { vercelProjects } from '../data/catalog'
 import Section from './layouts/Section'
 import { ProjectTile } from './ProjectTile'
 
-interface VercelCatalogProps {
-  onSelect: (project: VercelProject) => void
-}
-
-export function VercelCatalog({ onSelect }: VercelCatalogProps) {
+export function VercelCatalog() {
   return (
     <Section
       id="catalog"
@@ -26,19 +22,14 @@ export function VercelCatalog({ onSelect }: VercelCatalogProps) {
         </div>
         <h2 className="text-h2 text-white">Deployed projects</h2>
         <p className="mt-4 max-w-2xl font-body text-18 text-white/70">
-          Team travis-fleishers-projects. Open a tile for repo, domains, Supabase,
-          and services.
+          Team travis-fleishers-projects. Open a tile for a simplified README —
+          variants, deploy notes, and how to run locally.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {vercelProjects.map((project, index) => (
-          <ProjectTile
-            key={project.id}
-            project={project}
-            index={index}
-            onSelect={onSelect}
-          />
+          <ProjectTile key={project.id} project={project} index={index} />
         ))}
       </div>
     </Section>
